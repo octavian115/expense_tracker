@@ -1,0 +1,287 @@
+/* ------------------------------------------------------------------ */
+/* Profile page                                                        */
+/* ------------------------------------------------------------------ */
+
+.profile-page {
+    padding: 3rem 2rem 5rem;
+    background: var(--paper);
+}
+
+.profile-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Shared card surface                                                 */
+/* ------------------------------------------------------------------ */
+
+.profile-card {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Identity card                                                       */
+/* ------------------------------------------------------------------ */
+
+.profile-identity {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--paper);
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.profile-name {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+}
+
+.profile-email {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    margin-bottom: 0.15rem;
+}
+
+.profile-since {
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+}
+
+/* ------------------------------------------------------------------ */
+/* Stats row                                                           */
+/* ------------------------------------------------------------------ */
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.stat-card {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.75rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    text-align: center;
+}
+
+.stat-icon {
+    color: var(--accent);
+    width: 22px;
+    height: 22px;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+/* ------------------------------------------------------------------ */
+/* Bottom two-column layout                                            */
+/* ------------------------------------------------------------------ */
+
+.profile-bottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* ------------------------------------------------------------------ */
+/* Section title                                                       */
+/* ------------------------------------------------------------------ */
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Transaction table                                                   */
+/* ------------------------------------------------------------------ */
+
+.tx-table-wrap {
+    overflow-x: auto;
+}
+
+.tx-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.tx-table thead th {
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0 0.75rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.tx-table tbody tr {
+    transition: background 0.15s;
+}
+
+.tx-table tbody tr:hover {
+    background: var(--paper-warm);
+}
+
+.tx-table tbody td {
+    padding: 0.85rem 0.75rem;
+    border-bottom: 1px solid var(--border-soft);
+    vertical-align: middle;
+}
+
+.tx-date {
+    color: var(--ink-muted);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.tx-amount-col {
+    text-align: right !important;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-soft);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------ */
+/* Category badges                                                     */
+/* ------------------------------------------------------------------ */
+
+.cat-badge {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: var(--border-soft);
+    color: var(--ink-soft);
+}
+
+.cat-food          { background: var(--accent-2-light); color: var(--accent-2); }
+.cat-bills         { background: var(--accent-light);   color: var(--accent); }
+.cat-shopping      { background: var(--accent-light);   color: var(--accent); }
+.cat-health        { background: var(--danger-light);   color: var(--danger); }
+.cat-entertainment { background: var(--accent-2-light); color: var(--accent-2); }
+.cat-transport     { background: var(--border-soft);    color: var(--ink-muted); }
+.cat-other         { background: var(--border-soft);    color: var(--ink-muted); }
+
+/* ------------------------------------------------------------------ */
+/* Category breakdown bars                                             */
+/* ------------------------------------------------------------------ */
+
+.cat-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cat-bar-row {
+    display: grid;
+    grid-template-columns: 90px 1fr 56px;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.cat-bar-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+}
+
+.cat-bar-track {
+    height: 6px;
+    background: var(--border-soft);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.cat-bar-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 999px;
+}
+
+.cat-fill-food          { background: var(--accent-2); }
+.cat-fill-bills         { background: var(--accent); }
+.cat-fill-shopping      { background: var(--accent); }
+.cat-fill-health        { background: var(--danger); }
+.cat-fill-entertainment { background: var(--accent-2); }
+.cat-fill-transport     { background: var(--ink-muted); }
+.cat-fill-other         { background: var(--ink-muted); }
+
+.cat-bar-amt {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--ink-muted);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                          */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 700px) {
+    .profile-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-identity {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card { padding: 1.25rem; }
+    .profile-page { padding: 1.5rem 1rem 4rem; }
+}
